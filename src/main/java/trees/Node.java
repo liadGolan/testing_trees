@@ -2,8 +2,8 @@ package trees;
 
 public class Node<A> {
     public final A contents;
-    public final Node<A> left;
-    public final Node<A> right;
+    public Node<A> left;
+    public Node<A> right;
 
     public Node(final A contents,
                 final Node<A> left,

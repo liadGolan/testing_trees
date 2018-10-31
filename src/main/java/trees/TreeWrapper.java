@@ -12,6 +12,10 @@ class TreeWrapper<A> implements TreeInterface<A>
 		return this.node.contents;
 	}
 
+	public Node<A> getNode() {
+		return this.node;
+	}
+
 	public TreeWrapper<A> getLeftChild() {
 		if(this.node.left != null) {
 			return this.returnNewTree(this.node.left);
@@ -27,8 +31,17 @@ class TreeWrapper<A> implements TreeInterface<A>
 			return null;
 		}
 	}
+
 	public TreeWrapper<A> returnNewTree(Node<A> node){
 		return new TreeWrapper<A>(node);
+	}
+
+	public void setLeftChild(Node<A> node) {
+		this.node.left = node;
+	}
+
+	public void setRightChild(Node<A> node) {
+		this.node.right = node;
 	}
 
 	
